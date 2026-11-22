@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rian Luxury Thai Spa Marathahalli | Authentic Thai Massage, Hammam &amp; Jacuzzi in Bengaluru</title>
-  <meta name="description" content="Visit Rian Luxury Thai Spa on 2nd Floor, Venkatadri Plaza, next to Nandana Palace, Marathahalli ORR, Bengaluru. Authentic Dry Thai, Balinese, Swedish, Deep Tissue, Couple Massage, Turkish Hamam &amp; VVIP Royal Jacuzzi starting from ₹999." />
+  <meta name="description" content="Visit Rian Luxury Thai Spa on 2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, next to Nandana Palace, Marathahalli, Bengaluru, Karnataka 560037. Dry Thai, Balinese, Swedish, Deep Tissue, Couple Massage, Turkish Hamam &amp; VVIP Royal Jacuzzi starting from ₹999." />
   <meta name="keywords" content="Rian Luxury Thai Spa, Thai spa Marathahalli, luxury spa Outer Ring Road Bengaluru, Dry Thai Massage Marathahalli, Turkish Hamam Bengaluru, VVIP Royal Jacuzzi Spa, Couple Massage Marathahalli, Balinese Massage Bengaluru, Deep Tissue Massage Marathahalli" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="author" content="Rian Luxury Thai Spa" />
   <link rel="canonical" href="https://www.rianluxurythaispamarathahalli.com/" />
 
-  <!-- Local Geo & Open Graph Metadata for Local Search & Social Sharing -->
+  <!-- Local Geo & Open Graph Metadata for Local Search & Answer Engine Optimization (AEO) -->
   <meta name="geo.region" content="IN-KA" />
   <meta name="geo.placename" content="Marathahalli, Bengaluru" />
   <meta name="geo.position" content="12.9569;77.7011" />
@@ -27,7 +27,7 @@
   <meta property="business:contact_data:postal_code" content="560037" />
   <meta property="business:contact_data:country_name" content="India" />
 
-  <!-- Google Fonts: Playfair Display (Luxury Serif) + Plus Jakarta Sans (Clean Modern Sans) -->
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -35,6 +35,23 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    // Define fallback handler in <head> so inline <img> onerror attributes never fire before definition
+    window.handleSmartImageFallback = function (imgEl) {
+      try {
+        const queue = JSON.parse(imgEl.dataset.fallbackQueue || imgEl.dataset.fallbacks || "[]");
+        if (Array.isArray(queue) && queue.length > 0) {
+          const nextSrc = queue.shift();
+          imgEl.dataset.fallbackQueue = JSON.stringify(queue);
+          imgEl.src = nextSrc;
+          return;
+        }
+      } catch (err) {
+        // Ignore parse errors and hide broken image gracefully
+      }
+      imgEl.onerror = null;
+      imgEl.style.display = "none";
+    };
+
     tailwind.config = {
       theme: {
         extend: {
@@ -76,9 +93,8 @@
     };
   </script>
 
-  <!-- Custom Architectural Reception Lattice & Metallic Gold-Foil Accents -->
+  <!-- Reception-Inspired Champagne, Gilded Gold & Sapphire Accents -->
   <style>
-    /* Subtle golden geometric diamond-mirror lattice inspired by the Marathahalli reception wall */
     .reception-lattice {
       background-color: #FAF6EE;
       background-image:
@@ -90,7 +106,6 @@
       background-size: 56px 56px;
     }
 
-    /* Warm silk card surface with gilded hairline border */
     .gilded-card {
       background: linear-gradient(180deg, #FFFDF9 0%, #F7F0E2 100%);
       border: 1px solid rgba(184, 134, 45, 0.35);
@@ -102,21 +117,19 @@
       box-shadow: 0 16px 34px -8px rgba(140, 98, 24, 0.16);
     }
 
-    /* Metallic gold-foil text gradient */
     .gold-foil-text {
       background: linear-gradient(135deg, #7A5212 0%, #B8862D 42%, #D4AF37 65%, #8C6218 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* Ornamental double gold divider inspired by Rian Luxury Thai Spa crest frame */
     .gilded-divider {
       height: 3px;
       background: linear-gradient(90deg, transparent 0%, rgba(184, 134, 45, 0.3) 20%, #B8862D 50%, rgba(184, 134, 45, 0.3) 80%, transparent 100%);
     }
   </style>
 
-  <!-- JSON-LD Structured Data for Local SEO, Rich Snippets & Answer Engine Optimization (AEO) -->
+  <!-- JSON-LD Structured Data for Local SEO & Answer Engine Optimization (AEO) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -126,18 +139,18 @@
         "@id": "https://www.rianluxurythaispamarathahalli.com/#business",
         "name": "Rian Luxury Thai Spa",
         "url": "https://www.rianluxurythaispamarathahalli.com/",
-        "logo": "https://www.rianluxurythaispamarathahalli.com/rian_logo_cutout.jpg",
+        "logo": "https://www.rianluxurythaispamarathahalli.com/rian-logo.jpg",
         "image": [
-          "https://www.rianluxurythaispamarathahalli.com/IMG_20261015_132457.jpg",
-          "https://www.rianluxurythaispamarathahalli.com/IMG_20261015_132335.jpg",
-          "https://www.rianluxurythaispamarathahalli.com/IMG_20261015_132038.jpg",
-          "https://www.rianluxurythaispamarathahalli.com/IMG_20261015_135602.jpg"
+          "https://www.rianluxurythaispamarathahalli.com/reception-desk.jpg",
+          "https://www.rianluxurythaispamarathahalli.com/reception-sofa.jpg",
+          "https://www.rianluxurythaispamarathahalli.com/foot-lounge.jpg",
+          "https://www.rianluxurythaispamarathahalli.com/therapy-suite-1.jpg"
         ],
         "telephone": "+919606919198",
         "priceRange": "₹999 - ₹5999",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, UPI, Credit Card, Debit Card",
-        "description": "Rian Luxury Thai Spa in Marathahalli, Bengaluru offers authentic Dry Thai Massage, Swedish, Deep Tissue, Balinese, Aromatherapy, Couple Suites, VIP & VVIP Royal Jacuzzi sessions, Turkish Hamam, Scrub & Body Polishing, and Foot Reflexology.",
+        "description": "Rian Luxury Thai Spa at 2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, next to Nandana Palace, Marathahalli, Bengaluru, Karnataka 560037 offers Dry Thai Massage, Swedish Massage, Deep Tissue Massage, Balinese Massage, Aroma Therapy Massage, Couple Massage, Semi VIP Session, VIP Session, VVIP Royal Jacuzzi Session, Turkish Hamam, Scrub & Body Polishing, and Foot Massage.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, next to Nandana Palace",
@@ -310,7 +323,7 @@
             "name": "Where is Rian Luxury Thai Spa located in Marathahalli, Bengaluru?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Rian Luxury Thai Spa is located on the 2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Road, right next to Nandana Palace, Marathahalli, Bengaluru, Karnataka 560037. It is easily accessible from Bellandur, Brookefield, Kadubeesanahalli, and Whitefield."
+              "text": "Rian Luxury Thai Spa is located at 2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, next to Nandana Palace, Marathahalli, Bengaluru, Karnataka 560037."
             }
           },
           {
@@ -318,23 +331,15 @@
             "name": "What are the starting prices for massage and spa services at Rian Luxury Thai Spa?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Services start at ₹999 for Foot Massage, ₹1,999 for Dry Thai Massage, ₹2,199 for Aroma Therapy Massage, ₹2,799 for Balinese Massage, ₹2,999 for Swedish Massage, Deep Tissue Massage, and Scrub & Body Polishing, ₹3,499 for Semi VIP Sessions, ₹3,999 for VIP Sessions, ₹4,999 for Couple Massage, and ₹5,999 for Turkish Hamam and VVIP Royal Jacuzzi Sessions."
+              "text": "Services start from ₹999 for Foot Massage, ₹1,999 for Dry Thai Massage, ₹2,199 for Aroma Therapy Massage, ₹2,799 for Balinese Massage, ₹2,999 for Swedish Massage, Deep Tissue Massage, and Scrub & Body Polishing, ₹3,499 for Semi VIP Session, ₹3,999 for VIP Session, ₹4,999 for Couple Massage, and ₹5,999 for VVIP Royal Jacuzzi Session and Turkish Hamam."
             }
           },
           {
             "@type": "Question",
-            "name": "What is the difference between Dry Thai Massage, Balinese Massage, and Deep Tissue Massage?",
+            "name": "Do you offer Couple Massage rooms, Turkish Hamam, and VVIP Royal Jacuzzi sessions?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Dry Thai Massage (₹1,999 onwards) is an oil-free therapy combining assisted yoga stretching and acupressure to boost flexibility and relieve stiffness. Balinese Massage (₹2,799 onwards) blends gentle stretches, acupressure, and aromatic oils for deep calm. Deep Tissue Massage (₹2,999 onwards) uses slow, firm pressure to release chronic muscle knots and desk or gym soreness."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer Couple Massage suites, Turkish Hamam, and Jacuzzi sessions?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We feature private Couple Massage rooms (₹4,999 onwards) with side-by-side therapy beds, traditional Turkish Hamam steam, scrub, and foam rituals (₹5,999 onwards), and VVIP Royal Jacuzzi suites (₹5,999 onwards) combining a warm hydro-soak with full-body massage."
+              "text": "Yes. We offer Couple Massage (₹4,999 onwards) in a private couple room with side-by-side massage, Turkish Hamam (₹5,999 onwards) with steam, scrub & foam ritual, and VVIP Royal Jacuzzi Session (₹5,999 onwards) with a jacuzzi soak and full-body massage."
             }
           },
           {
@@ -342,15 +347,7 @@
             "name": "How can I book an appointment or view the WhatsApp service catalogue?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You can book directly on WhatsApp or call +91 96069 19198, or browse our official WhatsApp Catalogue at https://wa.me/c/919606919198. Same-day and advance slots are available daily."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What hygiene and professional wellness standards do you follow?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Rian Luxury Thai Spa strictly provides certified, professional therapeutic wellness and relaxation treatments. Every suite is sanitized between guests with fresh single-use linens, disposable essentials, and trained therapists."
+              "text": "You can book via WhatsApp or call +91 96069 19198, use the booking form on this page, or view the WhatsApp Catalogue at https://wa.me/c/919606919198."
             }
           }
         ]
@@ -362,12 +359,12 @@
 
 <body class="bg-champagne-100 text-espresso-900 font-sans antialiased selection:bg-gold-400 selection:text-espresso-950 pb-20 md:pb-0">
 
-  <!-- Top Utility Bar (Royal Sapphire & Burnished Gold Trim matching Reception Counter) -->
+  <!-- Top Utility Bar -->
   <div class="bg-royal-900 border-b border-gold-400/50 text-xs text-champagne-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
       <div class="flex items-center gap-2 text-center sm:text-left">
         <span class="text-gold-300" aria-hidden="true">&#9670;</span>
-        <span>2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, next to Nandana Palace, Bengaluru 560037</span>
+        <span>2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, next to Nandana Palace, Marathahalli, Bengaluru, Karnataka 560037</span>
       </div>
       <div class="flex items-center gap-4 shrink-0">
         <a href="tel:+919606919198" class="hover:text-gold-300 transition font-semibold flex items-center gap-1.5 text-white">
@@ -380,17 +377,18 @@
     </div>
   </div>
 
-  <!-- Sticky Primary Navigation (Warm Ivory & Gilded Brass Border) -->
+  <!-- Sticky Primary Navigation -->
   <header class="sticky top-0 z-40 bg-champagne-50/95 backdrop-blur-md border-b border-gold-500/35 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
-      <!-- Brand Logo (1000301758.jpg cream-gold crest with fallback to rian_logo_cutout.jpg) -->
+      <!-- Brand Logo (rian-logo.jpg with fallbacks to rian-banner.jpg and original names) -->
       <a href="#top" class="flex items-center gap-3 group">
         <div class="h-12 w-20 sm:w-24 rounded-xl bg-champagne-100 border border-gold-500/50 overflow-hidden flex items-center justify-center shadow-sm group-hover:border-gold-600 transition shrink-0">
           <img
-            src="1000301758.jpg"
-            alt="Rian Luxury Thai Spa Royal Crown Logo"
-            onerror="if(this.src.indexOf('rian_logo_cutout.jpg')===-1){this.src='rian_logo_cutout.jpg';}else{this.style.display='none';}"
-            class="w-full h-full object-cover"
+            src="rian-logo.jpg"
+            alt="Rian Luxury Thai Spa Logo"
+            data-fallbacks='["rian-banner.jpg","rian_logo_cutout.jpg","1000301758.jpg"]'
+            onerror="handleSmartImageFallback(this)"
+            class="w-full h-full object-contain p-0.5"
           />
         </div>
         <div>
@@ -440,14 +438,14 @@
       <a href="#gallery" class="block py-2 px-3 rounded-lg hover:bg-champagne-200 text-sm font-semibold text-espresso-900">Reception, Lounge &amp; Therapy Suites</a>
       <a href="#booking-funnel" class="block py-2 px-3 rounded-lg hover:bg-champagne-200 text-sm font-semibold text-espresso-900">WhatsApp Appointment Funnel</a>
       <a href="#virtual-tour" class="block py-2 px-3 rounded-lg hover:bg-champagne-200 text-sm font-semibold text-espresso-900">360&deg; 3D Virtual Spa Tour</a>
-      <a href="#faq" class="block py-2 px-3 rounded-lg hover:bg-champagne-200 text-sm font-semibold text-espresso-900">Answers &amp; FAQ</a>
+      <a href="#faq" class="block py-2 px-3 rounded-lg hover:bg-champagne-200 text-sm font-semibold text-espresso-900">Frequently Asked Questions</a>
       <a href="#location" class="block py-2 px-3 rounded-lg hover:bg-champagne-200 text-sm font-semibold text-espresso-900">Location, Reviews &amp; Instagram</a>
-      <a href="#policies" class="block py-2 px-3 rounded-lg hover:bg-champagne-200 text-sm font-semibold text-espresso-900">Terms, Hygiene &amp; Privacy Policy</a>
+      <a href="#policies" class="block py-2 px-3 rounded-lg hover:bg-champagne-200 text-sm font-semibold text-espresso-900">Terms &amp; Conditions</a>
     </div>
   </header>
 
   <main id="top">
-    <!-- Hero Section (Champagne Silk + Golden Lattice Pattern inspired by Reception Wallpaper) -->
+    <!-- Hero Section -->
     <section class="relative overflow-hidden reception-lattice border-b border-gold-500/35">
       <div class="absolute inset-0 bg-gradient-to-br from-champagne-50/90 via-champagne-100/75 to-champagne-200/90 pointer-events-none"></div>
       <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gold-400/15 blur-3xl pointer-events-none"></div>
@@ -459,7 +457,7 @@
           <div class="lg:col-span-7 space-y-6">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-champagne-50 border border-gold-500/45 text-espresso-800 text-xs font-semibold tracking-wide shadow-sm">
               <span class="text-gold-600">&#9733;</span>
-              <span>2nd Floor, Venkatadri Plaza, next to Nandana Palace, ORR Marathahalli</span>
+              <span>2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, next to Nandana Palace</span>
             </div>
 
             <h1 class="font-serif text-3xl sm:text-5xl lg:text-[52px] font-bold leading-tight text-espresso-950">
@@ -470,7 +468,7 @@
             </h1>
 
             <p class="text-base sm:text-lg text-espresso-700 leading-relaxed max-w-2xl">
-              Step into a sanctuary of royal Thai hospitality and gilded architectural elegance. Experience traditional Dry Thai, Balinese, Swedish &amp; Deep Tissue massages, private Couple Suites, Turkish Hamam rituals, and VVIP Royal Jacuzzi sessions starting from <strong class="text-gold-700 font-bold">&#8377;999</strong>.
+              Experience traditional Dry Thai, Balinese, Swedish &amp; Deep Tissue massages, Aroma Therapy, Couple Suites, Semi VIP &amp; VIP rooms, Turkish Hamam, Scrub &amp; Body Polishing, Foot Massage, and VVIP Royal Jacuzzi sessions starting from <strong class="text-gold-700 font-bold">&#8377;999 onwards</strong>.
             </p>
 
             <!-- Primary Conversion CTAs -->
@@ -493,40 +491,41 @@
               </a>
             </div>
 
-            <!-- Trust & Compliance Highlights -->
+            <!-- Highlights -->
             <div class="grid grid-cols-3 gap-3 pt-5 border-t border-gold-500/30 max-w-xl">
               <div>
-                <p class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">12+</p>
-                <p class="text-xs text-espresso-700 font-medium">Signature Therapies &amp; Royal Suites</p>
+                <p class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">12</p>
+                <p class="text-xs text-espresso-700 font-medium">Therapies &amp; Luxury Suites</p>
               </div>
               <div>
-                <p class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">100%</p>
-                <p class="text-xs text-espresso-700 font-medium">Sanitized Suites &amp; Single-Use Linens</p>
+                <p class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">&#8377;999+</p>
+                <p class="text-xs text-espresso-700 font-medium">Transparent Starting Rates</p>
               </div>
               <div>
                 <p class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">360&deg;</p>
-                <p class="text-xs text-espresso-700 font-medium">Verified Google Street View Tour</p>
+                <p class="text-xs text-espresso-700 font-medium">Interactive Virtual Tour</p>
               </div>
             </div>
           </div>
 
-          <!-- Right Column: Gilded Reception Showcase Card matching IMG_20261015_132457.jpg -->
+          <!-- Right Column: Reception & Spa Highlights Card -->
           <div class="lg:col-span-5">
             <div class="rounded-2xl gilded-card border-2 border-gold-500/50 overflow-hidden shadow-2xl relative">
-              <!-- Reception & Buddha Wall Banner -->
               <div class="relative h-52 sm:h-56 bg-champagne-200 overflow-hidden border-b border-gold-500/40">
                 <img
-                  src="IMG_20261015_132457.jpg"
-                  alt="Rian Luxury Thai Spa Grand Reception & Buddha Lounge in Marathahalli"
-                  onerror="this.src='1000301758.jpg';"
+                  src="reception-desk.jpg"
+                  alt="Rian Luxury Thai Spa Reception in Marathahalli"
+                  data-fallbacks='["rian-banner.jpg","rian-logo.jpg","IMG_20261015_132457.jpg","1000301758.jpg","rian_logo_cutout.jpg"]'
+                  onerror="handleSmartImageFallback(this)"
                   class="w-full h-full object-cover"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-espresso-950/85 via-espresso-950/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 bg-champagne-50/95 backdrop-blur-sm border border-gold-500/60 rounded-xl px-2.5 py-1 flex items-center gap-2 shadow">
                   <img
-                    src="1000301758.jpg"
+                    src="rian-logo.jpg"
                     alt="Rian Luxury Thai Spa Emblem"
-                    onerror="this.src='rian_logo_cutout.jpg';"
+                    data-fallbacks='["rian-banner.jpg","rian_logo_cutout.jpg","1000301758.jpg"]'
+                    onerror="handleSmartImageFallback(this)"
                     class="h-7 w-auto object-contain rounded"
                   />
                 </div>
@@ -545,31 +544,31 @@
                 <ul class="space-y-2.5 text-sm">
                   <li class="flex items-center justify-between p-3 rounded-xl bg-champagne-100 border border-gold-500/30">
                     <div>
-                      <p class="font-bold text-espresso-950">Foot Reflexology</p>
-                      <p class="text-xs text-espresso-700">Royal blue &amp; gold lounge thrones</p>
+                      <p class="font-bold text-espresso-950">Foot Massage</p>
+                      <p class="text-xs text-espresso-700">Relaxing foot reflexology</p>
                     </div>
-                    <span class="text-gold-700 font-bold text-base">&#8377;999+</span>
+                    <span class="text-gold-700 font-bold text-base">&#8377;999 onwards</span>
                   </li>
                   <li class="flex items-center justify-between p-3 rounded-xl bg-champagne-100 border border-gold-500/30">
                     <div>
                       <p class="font-bold text-espresso-950">Dry Thai Massage</p>
-                      <p class="text-xs text-espresso-700">Oil-free stretching &amp; acupressure</p>
+                      <p class="text-xs text-espresso-700">60 / 90 min &bull; Traditional stretching &amp; pressure-point</p>
                     </div>
-                    <span class="text-gold-700 font-bold text-base">&#8377;1,999+</span>
+                    <span class="text-gold-700 font-bold text-base">&#8377;1,999 onwards</span>
                   </li>
                   <li class="flex items-center justify-between p-3 rounded-xl bg-champagne-100 border border-gold-500/30">
                     <div>
-                      <p class="font-bold text-espresso-950">Couple Private Suite</p>
-                      <p class="text-xs text-espresso-700">Side-by-side candlelight ambience</p>
+                      <p class="font-bold text-espresso-950">Couple Massage</p>
+                      <p class="text-xs text-espresso-700">Private couple room &bull; Candles &amp; premium ambience</p>
                     </div>
-                    <span class="text-gold-700 font-bold text-base">&#8377;4,999+</span>
+                    <span class="text-gold-700 font-bold text-base">&#8377;4,999 onwards</span>
                   </li>
                   <li class="flex items-center justify-between p-3 rounded-xl bg-champagne-100 border border-gold-500/30">
                     <div>
                       <p class="font-bold text-espresso-950">VVIP Royal Jacuzzi &amp; Turkish Hamam</p>
-                      <p class="text-xs text-espresso-700">Hydro-soak, steam, scrub &amp; foam ritual</p>
+                      <p class="text-xs text-espresso-700">Jacuzzi soak + massage &bull; Steam, scrub &amp; foam ritual</p>
                     </div>
-                    <span class="text-gold-700 font-bold text-base">&#8377;5,999+</span>
+                    <span class="text-gold-700 font-bold text-base">&#8377;5,999 onwards</span>
                   </li>
                 </ul>
 
@@ -595,7 +594,7 @@
         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-950">Services &amp; Starting Prices</h2>
         <div class="gilded-divider w-40 mx-auto my-2"></div>
         <p class="text-espresso-700 text-sm sm:text-base">
-          Choose from 12 authentic massage therapies, body polishing rituals, and private luxury suites at our Marathahalli Outer Ring Road sanctuary. Tap any service to pre-fill your WhatsApp booking.
+          All 12 wellness therapies and luxury suite sessions at Rian Luxury Thai Spa, Marathahalli. Select a service to schedule via WhatsApp.
         </p>
       </div>
 
@@ -605,7 +604,7 @@
           All 12 Services
         </button>
         <button type="button" data-filter="massages" class="service-filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-champagne-50 text-espresso-800 border border-gold-500/40 hover:border-gold-600 transition">
-          Signature Massages
+          Massages &amp; Reflexology
         </button>
         <button type="button" data-filter="body" class="service-filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-champagne-50 text-espresso-800 border border-gold-500/40 hover:border-gold-600 transition">
           Body &amp; Turkish Hamam
@@ -617,24 +616,24 @@
 
       <!-- Services Grid Container -->
       <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Rendered by JS below -->
+        <!-- Populated by JS -->
       </div>
     </section>
 
-    <!-- Dedicated Reception, Lounge & Therapy Suites Photo Gallery Section -->
+    <!-- Reception, Lounge & Therapy Suites Photo Gallery Section -->
     <section id="gallery" class="py-16 sm:py-20 bg-champagne-200/75 border-y border-gold-500/35">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div class="space-y-2.5 max-w-2xl">
-            <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold">Inside Our Marathahalli Sanctuary</span>
+            <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold">Marathahalli Sanctuary</span>
             <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-950">Reception, Lounge &amp; Therapy Suites</h2>
             <p class="text-espresso-700 text-sm sm:text-base">
-              Explore authentic photographs of our golden reception, royal waiting lounge, sapphire-and-gold foot reflexology thrones, candlelit corridor, and private single, VIP, and twin couple therapy suites. Click any photo to enlarge.
+              Browse photos of our reception area, royal waiting lounge, foot reflexology thrones, corridor, and private therapy suites. Click any image to view in full size.
             </p>
           </div>
           <a href="#virtual-tour"
              class="self-start md:self-auto inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gold-500/50 bg-champagne-50 hover:bg-gold-500 hover:text-white text-espresso-900 text-xs font-bold shadow-sm transition">
-            <span>Switch to 360&deg; 3D Street View &rarr;</span>
+            <span>Explore 360&deg; 3D Tour &rarr;</span>
           </a>
         </div>
 
@@ -645,54 +644,54 @@
       </div>
     </section>
 
-    <!-- Interactive WhatsApp Lead Funnel Section (Royal Sapphire & Gilded Gold Frame) -->
+    <!-- Interactive WhatsApp Lead Funnel Section -->
     <section id="booking-funnel" class="py-16 reception-lattice border-b border-gold-500/35">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="rounded-3xl bg-gradient-to-br from-royal-900 via-royal-800 to-royal-950 border-2 border-gold-400/60 p-6 sm:p-10 shadow-2xl">
           <div class="grid lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-5 space-y-4">
               <span class="inline-block px-3 py-1 rounded-full bg-gold-400/20 border border-gold-300/40 text-gold-200 text-xs font-semibold">
-                Instant WhatsApp Concierge
+                WhatsApp Booking Funnel
               </span>
               <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white">
-                Reserve Your Session in 30 Seconds
+                Book Your Session on WhatsApp
               </h2>
               <p class="text-sm text-champagne-200 leading-relaxed">
-                Select your preferred therapy, duration, date, and time slot. Our booking funnel generates an instant WhatsApp request directly to our Marathahalli reception desk (<strong class="text-gold-300">+91 96069 19198</strong>).
+                Select your therapy, duration, date, and preferred time to send a structured booking inquiry directly to <strong class="text-gold-300">+91 96069 19198</strong>.
               </p>
               <div class="space-y-2.5 pt-2 text-xs text-champagne-100">
                 <div class="flex items-start gap-2.5">
                   <span class="text-gold-300 font-bold">&#10003;</span>
-                  <span>No advance payment required to check slot availability</span>
+                  <span>Direct WhatsApp confirmation from our Marathahalli front desk</span>
                 </div>
                 <div class="flex items-start gap-2.5">
                   <span class="text-gold-300 font-bold">&#10003;</span>
-                  <span>Private sanitized rooms &amp; fresh single-use linens</span>
+                  <span>Clean private rooms &amp; fresh linens for every session</span>
                 </div>
                 <div class="flex items-start gap-2.5">
                   <span class="text-gold-300 font-bold">&#10003;</span>
-                  <span>Located at 2nd Floor, Venkatadri Plaza, next to Nandana Palace</span>
+                  <span>2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, next to Nandana Palace</span>
                 </div>
               </div>
               <div class="pt-2">
                 <a href="https://wa.me/c/919606919198" target="_blank" rel="noopener noreferrer"
                    class="inline-flex items-center gap-2 text-xs font-semibold text-gold-300 hover:text-gold-200 underline underline-offset-4">
-                  Prefer browsing on WhatsApp? Open Official Catalogue &rarr;
+                  Open Official WhatsApp Catalogue (wa.me/c/919606919198) &rarr;
                 </a>
               </div>
             </div>
 
-            <!-- Funnel Form (Warm Champagne Ivory Card) -->
+            <!-- Funnel Form -->
             <div class="lg:col-span-7 bg-champagne-50 border border-gold-400/60 rounded-2xl p-5 sm:p-6 shadow-xl">
               <form id="whatsappFunnelForm" class="space-y-4">
                 <div class="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label for="guestName" class="block text-xs font-bold text-espresso-900 mb-1.5">Your Name</label>
-                    <input type="text" id="guestName" name="guestName" placeholder="e.g., Rahul Sharma"
+                    <input type="text" id="guestName" name="guestName" placeholder="Enter your name"
                            class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-gold-500/45 text-sm text-espresso-950 placeholder-espresso-700/50 focus:outline-none focus:border-gold-600" />
                   </div>
                   <div>
-                    <label for="serviceSelect" class="block text-xs font-bold text-espresso-900 mb-1.5">Select Therapy / Suite</label>
+                    <label for="serviceSelect" class="block text-xs font-bold text-espresso-900 mb-1.5">Select Service</label>
                     <select id="serviceSelect" name="serviceSelect"
                             class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-gold-500/45 text-sm text-espresso-950 focus:outline-none focus:border-gold-600">
                       <option value="Dry Thai Massage (₹1,999 onwards)">1. Dry Thai Massage — ₹1,999 onwards</option>
@@ -741,7 +740,7 @@
                 <div class="pt-2 flex flex-col sm:flex-row gap-3">
                   <button type="submit"
                           class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold text-sm shadow-lg transition">
-                    <span>Send Booking Request on WhatsApp</span>
+                    <span>Send Request on WhatsApp</span>
                   </button>
                   <a href="tel:+919606919198"
                      class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl border border-gold-500/50 bg-champagne-200 hover:bg-champagne-300 text-espresso-900 font-bold text-sm transition">
@@ -755,34 +754,34 @@
       </div>
     </section>
 
-    <!-- 360° 3D Virtual Spa Tour Section -->
+    <!-- 360° 3D Virtual Tour Section -->
     <section id="virtual-tour" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto space-y-3 mb-10">
-        <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold">Interactive 3D Walkthrough</span>
+        <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold">Interactive 3D View</span>
         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-950">360&deg; Virtual Tour of Rian Luxury Thai Spa</h2>
         <div class="gilded-divider w-40 mx-auto my-2"></div>
         <p class="text-espresso-700 text-sm sm:text-base">
-          Drag, rotate, and inspect our golden reception, royal foot reflexology thrones, and private therapy suites in full 360&deg; 3D view before you visit our Marathahalli center.
+          Explore our Marathahalli spa interiors in interactive 360&deg; 3D view. Switch between all three panoramas or focus on a single view.
         </p>
       </div>
 
-      <!-- Interactive View Switcher + Layout Toggle -->
+      <!-- View Switcher Tabs -->
       <div class="flex flex-wrap items-center justify-between gap-3 mb-6 gilded-card p-3 rounded-2xl">
         <div class="flex flex-wrap items-center gap-2" role="tablist" aria-label="360 Virtual Tour Views">
           <button type="button" data-tour="all" class="tour-tab-btn active px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-gold-500 to-gold-400 text-white shadow transition">
             All 3 Views (3D Grid)
           </button>
           <button type="button" data-tour="view1" class="tour-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-champagne-100 text-espresso-800 border border-gold-500/30 hover:border-gold-600 transition">
-            360&deg; View 1: Grand Lobby &amp; Lounge
+            360&deg; View 1
           </button>
           <button type="button" data-tour="view2" class="tour-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-champagne-100 text-espresso-800 border border-gold-500/30 hover:border-gold-600 transition">
-            360&deg; View 2: Royal Ambience &amp; Corridor
+            360&deg; View 2
           </button>
           <button type="button" data-tour="view3" class="tour-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-champagne-100 text-espresso-800 border border-gold-500/30 hover:border-gold-600 transition">
-            360&deg; View 3: Private Therapy Suite
+            360&deg; View 3
           </button>
         </div>
-        <span class="text-xs text-gold-700 font-semibold px-2">Tip: Drag inside any frame to look around in 360&deg;</span>
+        <span class="text-xs text-gold-700 font-semibold px-2">Drag inside any 3D view to rotate</span>
       </div>
 
       <!-- 3D Virtual Tour Embeds Grid -->
@@ -790,12 +789,12 @@
         <!-- 1st 360° View -->
         <div id="tourCard1" class="tour-card rounded-2xl overflow-hidden gilded-card flex flex-col">
           <div class="px-4 py-3 bg-champagne-200/90 border-b border-gold-500/35 flex items-center justify-between">
-            <span class="font-serif font-bold text-espresso-950 text-sm">360&deg; View 01 &mdash; Royal Lounge &amp; Reception</span>
+            <span class="font-serif font-bold text-espresso-950 text-sm">360&deg; View 1</span>
             <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-royal-800 text-white">3D View</span>
           </div>
-          <div class="w-full h-[380px] sm:h-[420px] bg-champagne-200">
+          <div class="w-full h-[380px] sm:h-[450px] bg-champagne-200">
             <iframe
-              title="Rian Luxury Thai Spa Marathahalli 360 Virtual Tour View 1"
+              title="Rian Luxury Thai Spa 360 Virtual Tour 1"
               src="https://www.google.com/maps/embed?pb=!4v1795310592882!6m8!1m7!1sCAoSHENJQUJJaEIzaU9DMTB3UHpoN3l6bm5EQjh1ZXQ.!2m2!1d0!2d0!3f354.5849255993701!4f37.60492062534806!5f0.4000000000000002"
               width="600"
               height="450"
@@ -809,12 +808,12 @@
         <!-- 2nd 360° View -->
         <div id="tourCard2" class="tour-card rounded-2xl overflow-hidden gilded-card flex flex-col">
           <div class="px-4 py-3 bg-champagne-200/90 border-b border-gold-500/35 flex items-center justify-between">
-            <span class="font-serif font-bold text-espresso-950 text-sm">360&deg; View 02 &mdash; Interior Walkthrough</span>
+            <span class="font-serif font-bold text-espresso-950 text-sm">360&deg; View 2</span>
             <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-royal-800 text-white">3D View</span>
           </div>
-          <div class="w-full h-[380px] sm:h-[420px] bg-champagne-200">
+          <div class="w-full h-[380px] sm:h-[450px] bg-champagne-200">
             <iframe
-              title="Rian Luxury Thai Spa Marathahalli 360 Virtual Tour View 2"
+              title="Rian Luxury Thai Spa 360 Virtual Tour 2"
               src="https://www.google.com/maps/embed?pb=!4v1795310526137!6m8!1m7!1sCAoSHENJQUJJaEMzVDludmdkY3NESEVkZ1B1SXgtNk4.!2m2!1d0!2d0!3f83.61020848714347!4f-8.92986547343439!5f0.4000000000000002"
               width="600"
               height="450"
@@ -828,12 +827,12 @@
         <!-- 3rd 360° View -->
         <div id="tourCard3" class="tour-card rounded-2xl overflow-hidden gilded-card flex flex-col">
           <div class="px-4 py-3 bg-champagne-200/90 border-b border-gold-500/35 flex items-center justify-between">
-            <span class="font-serif font-bold text-espresso-950 text-sm">360&deg; View 03 &mdash; Therapy Suite Ambience</span>
+            <span class="font-serif font-bold text-espresso-950 text-sm">360&deg; View 3</span>
             <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-royal-800 text-white">3D View</span>
           </div>
-          <div class="w-full h-[380px] sm:h-[420px] bg-champagne-200">
+          <div class="w-full h-[380px] sm:h-[450px] bg-champagne-200">
             <iframe
-              title="Rian Luxury Thai Spa Marathahalli 360 Virtual Tour View 3"
+              title="Rian Luxury Thai Spa 360 Virtual Tour 3"
               src="https://www.google.com/maps/embed?pb=!4v1795310949220!6m8!1m7!1sCAoSHENJQUJJaENrazE3SS1LLUg3YlFCOHpoSmpQYXA.!2m2!1d0!2d0!3f0.305353426932923!4f1.9781966026509394!5f0.4000000000000002"
               width="600"
               height="450"
@@ -846,87 +845,74 @@
       </div>
     </section>
 
-    <!-- Answer Engine Optimization (AEO) & Local Search FAQ Section -->
+    <!-- FAQ Section (AEO & Local Ranking) -->
     <section id="faq" class="py-16 sm:py-20 bg-champagne-200/75 border-y border-gold-500/35">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center space-y-3 mb-10">
-          <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold">Guest Guide &amp; Local Answers</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-950">Frequently Asked Questions</h2>
+          <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold">Frequently Asked Questions</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-950">Answers for Guests in Marathahalli</h2>
           <p class="text-espresso-700 text-sm sm:text-base">
-            Clear answers about our Marathahalli Outer Ring Road location, therapy options, suite packages, and booking process.
+            Quick answers about our location, starting prices, suite options, and WhatsApp booking.
           </p>
         </div>
 
-        <div class="space-y-4" id="faqContainer">
+        <div class="space-y-4">
           <details class="group rounded-2xl gilded-card p-5 open:border-gold-600 transition" open>
             <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-serif text-base sm:text-lg font-bold text-espresso-950">
-              <span>Where is Rian Luxury Thai Spa located in Marathahalli, Bengaluru?</span>
+              <span>Where is Rian Luxury Thai Spa located?</span>
               <span class="text-gold-600 text-xl font-sans font-bold group-open:rotate-45 transition-transform">+</span>
             </summary>
             <p class="mt-3 text-sm text-espresso-700 leading-relaxed">
-              Rian Luxury Thai Spa is located on the <strong>2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, right next to Nandana Palace, Marathahalli, Bengaluru, Karnataka 560037</strong>. We are minutes away from Marathahalli Bridge, Bellandur, Kadubeesanahalli, Brookefield, and Whitefield.
+              We are located at <strong>2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, next to Nandana Palace, Marathahalli, Bengaluru, Karnataka 560037</strong>.
             </p>
           </details>
 
           <details class="group rounded-2xl gilded-card p-5 open:border-gold-600 transition">
             <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-serif text-base sm:text-lg font-bold text-espresso-950">
-              <span>What are the starting prices for massage and spa therapies?</span>
+              <span>What are the starting prices for all services?</span>
               <span class="text-gold-600 text-xl font-sans font-bold group-open:rotate-45 transition-transform">+</span>
             </summary>
             <p class="mt-3 text-sm text-espresso-700 leading-relaxed">
-              Our wellness menu begins at <strong>&#8377;999 onwards</strong> for Foot Massage, <strong>&#8377;1,999 onwards</strong> for Dry Thai Massage, <strong>&#8377;2,199 onwards</strong> for Aroma Therapy Massage, <strong>&#8377;2,799 onwards</strong> for Balinese Massage, and <strong>&#8377;2,999 onwards</strong> for Swedish Massage, Deep Tissue Massage, and Scrub &amp; Body Polishing. Upgraded suites include Semi VIP (&#8377;3,499+), VIP (&#8377;3,999+), Couple Massage (&#8377;4,999+), Turkish Hamam (&#8377;5,999+), and VVIP Royal Jacuzzi Sessions (&#8377;5,999+).
+              Foot Massage starts from <strong>&#8377;999</strong>, Dry Thai Massage from <strong>&#8377;1,999</strong>, Aroma Therapy Massage from <strong>&#8377;2,199</strong>, Balinese Massage from <strong>&#8377;2,799</strong>, Swedish Massage, Deep Tissue Massage &amp; Scrub and Body Polishing from <strong>&#8377;2,999</strong>, Semi VIP Session from <strong>&#8377;3,499</strong>, VIP Session from <strong>&#8377;3,999</strong>, Couple Massage from <strong>&#8377;4,999</strong>, and VVIP Royal Jacuzzi Session &amp; Turkish Hamam from <strong>&#8377;5,999</strong>.
             </p>
           </details>
 
           <details class="group rounded-2xl gilded-card p-5 open:border-gold-600 transition">
             <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-serif text-base sm:text-lg font-bold text-espresso-950">
-              <span>Which massage is best for IT desk stiffness or gym muscle recovery?</span>
+              <span>What does Dry Thai Massage include?</span>
               <span class="text-gold-600 text-xl font-sans font-bold group-open:rotate-45 transition-transform">+</span>
             </summary>
             <p class="mt-3 text-sm text-espresso-700 leading-relaxed">
-              For neck, shoulder, and lower-back stiffness from desk work or workouts, we recommend <strong>Deep Tissue Massage (&#8377;2,999 onwards)</strong> for slow, targeted pressure on muscle knots, or <strong>Dry Thai Massage (&#8377;1,999 onwards)</strong> for oil-free assisted stretching and acupressure that restores joint mobility.
+              Dry Thai Massage (starting from <strong>&#8377;1,999</strong>) is a traditional Thai stretching and pressure-point therapy with no oil. It improves flexibility, relieves stiffness and body pain, and is available in 60 or 90 minute options.
             </p>
           </details>
 
           <details class="group rounded-2xl gilded-card p-5 open:border-gold-600 transition">
             <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-serif text-base sm:text-lg font-bold text-espresso-950">
-              <span>What is included in the VVIP Royal Jacuzzi Session and Turkish Hamam?</span>
+              <span>How can I view the WhatsApp Catalogue or book directly?</span>
               <span class="text-gold-600 text-xl font-sans font-bold group-open:rotate-45 transition-transform">+</span>
             </summary>
             <p class="mt-3 text-sm text-espresso-700 leading-relaxed">
-              The <strong>VVIP Royal Jacuzzi Session (&#8377;5,999 onwards)</strong> combines a warm, relaxing jacuzzi soak with a full-body massage inside an exclusive VVIP suite. The <strong>Turkish Hamam (&#8377;5,999 onwards)</strong> features a traditional steam, exfoliating scrub, and rich foam cleansing ritual for deep skin detox and radiance.
-            </p>
-          </details>
-
-          <details class="group rounded-2xl gilded-card p-5 open:border-gold-600 transition">
-            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none font-serif text-base sm:text-lg font-bold text-espresso-950">
-              <span>How do I book an appointment or browse the official WhatsApp Catalogue?</span>
-              <span class="text-gold-600 text-xl font-sans font-bold group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-3 text-sm text-espresso-700 leading-relaxed">
-              You can message or call us directly at <strong>+91 96069 19198</strong>, use our instant booking form on this page, or view every therapy in our official WhatsApp Catalogue at <a href="https://wa.me/c/919606919198" target="_blank" rel="noopener noreferrer" class="text-gold-700 font-bold underline">wa.me/c/919606919198</a>.
+              You can call or message <strong>+91 96069 19198</strong> on WhatsApp, use our booking funnel above, or open the WhatsApp Catalogue directly at <a href="https://wa.me/c/919606919198" target="_blank" rel="noopener noreferrer" class="text-gold-700 font-bold underline">https://wa.me/c/919606919198</a>.
             </p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Local Location, Google Reviews & Social Hub -->
+    <!-- Location, Reviews & Social Hub -->
     <section id="location" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-12 gap-8 items-stretch">
         <!-- Left: Address, Directions & Review Hub -->
         <div class="lg:col-span-6 rounded-3xl gilded-card p-6 sm:p-8 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <span class="text-xs uppercase tracking-[0.2em] text-gold-600 font-bold">Visit Us in Marathahalli</span>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-950">Location, Reviews &amp; Official Channels</h2>
+            <span class="text-xs uppercase tracking-[0.2em] text-gold-600 font-bold">Visit Rian Luxury Thai Spa</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-950">Location, Google Reviews &amp; Social</h2>
 
             <div class="p-4 rounded-2xl bg-champagne-100 border border-gold-500/40 space-y-2">
               <p class="font-serif font-bold text-gold-700 text-lg">Rian Luxury Thai Spa</p>
               <p class="text-sm text-espresso-900 font-medium leading-relaxed">
                 2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Rd, next to Nandana Palace, Marathahalli, Bengaluru, Karnataka 560037
-              </p>
-              <p class="text-xs text-espresso-700 pt-1">
-                Landmark: 2nd Floor of Venkatadri Plaza, directly next to Nandana Palace Restaurant on Outer Ring Road (ORR), Marathahalli.
               </p>
             </div>
 
@@ -939,7 +925,7 @@
               <a href="https://g.page/r/CQ8JOTRqd4OyEBM/review"
                  target="_blank" rel="noopener noreferrer"
                  class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-gold-500/50 bg-champagne-50 hover:bg-champagne-200 text-espresso-900 font-bold text-xs sm:text-sm transition">
-                <span class="text-gold-600">&#9733;</span><span>Write a Google Review</span>
+                <span class="text-gold-600">&#9733;</span><span>Google Review Link</span>
               </a>
               <a href="https://www.instagram.com/rian_luxury_thai_spa/"
                  target="_blank" rel="noopener noreferrer"
@@ -949,22 +935,22 @@
               <a href="https://wa.me/c/919606919198"
                  target="_blank" rel="noopener noreferrer"
                  class="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm transition">
-                <span>WhatsApp Business Catalogue</span>
+                <span>WhatsApp Catalogue</span>
               </a>
             </div>
           </div>
 
           <div class="pt-4 border-t border-gold-500/25 flex flex-wrap items-center justify-between gap-2 text-xs text-espresso-700">
-            <span>Phone &amp; WhatsApp: <a href="tel:+919606919198" class="text-royal-800 font-bold">+91 96069 19198</a></span>
-            <span class="font-medium">Hours: 10:00 AM – 10:00 PM (All Days)</span>
+            <span>Phone / WhatsApp: <a href="tel:+919606919198" class="text-royal-800 font-bold">+91 96069 19198</a></span>
+            <span class="font-medium">Marathahalli, Bengaluru 560037</span>
           </div>
         </div>
 
-        <!-- Right: Standard Google Map Pin Embed for Directions -->
+        <!-- Right: Google Map Pin Embed -->
         <div class="lg:col-span-6 rounded-3xl overflow-hidden gilded-card min-h-[360px] flex flex-col">
           <div class="px-5 py-3.5 bg-champagne-200/90 border-b border-gold-500/35 flex items-center justify-between">
-            <span class="font-serif font-bold text-espresso-950 text-sm">Marathahalli Outer Ring Road Map Pin</span>
-            <span class="text-xs font-semibold text-gold-700">PIN: 560037</span>
+            <span class="font-serif font-bold text-espresso-950 text-sm">Venkatadri Plaza, Marathahalli Map Pin</span>
+            <span class="text-xs font-semibold text-gold-700">560037</span>
           </div>
           <iframe
             title="Google Map Location of Rian Luxury Thai Spa Marathahalli Bengaluru"
@@ -976,43 +962,43 @@
       </div>
     </section>
 
-    <!-- Terms & Conditions, Hygiene Policy & Privacy Policy (Google Ads Compliant) -->
+    <!-- Terms & Conditions (Google Ads Compliant) -->
     <section id="policies" class="py-16 bg-champagne-200/80 border-t border-gold-500/35">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mb-8">
-          <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold">Transparency &amp; Guest Standards</span>
-          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-950 mt-1">Terms &amp; Conditions, Wellness Policy &amp; Privacy</h2>
+          <span class="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold">Terms &amp; Conditions</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-950 mt-1">Terms &amp; Conditions, Wellness Standards &amp; Privacy</h2>
           <p class="text-sm text-espresso-700 mt-2">
-            Rian Luxury Thai Spa operates in strict compliance with professional wellness standards, local municipal regulations, and advertising transparency guidelines.
+            Rian Luxury Thai Spa operates in accordance with professional wellness standards, applicable local regulations, and advertising compliance policies.
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 text-sm">
           <div class="rounded-2xl gilded-card p-5 space-y-2">
-            <h3 class="font-serif font-bold text-gold-700 text-base">1. Strictly Professional Therapeutic Wellness</h3>
+            <h3 class="font-serif font-bold text-gold-700 text-base">1. Professional Wellness &amp; Therapy Scope</h3>
             <p class="text-espresso-700 text-xs sm:text-sm leading-relaxed">
-              Rian Luxury Thai Spa provides strictly professional, legitimate spa, massage, hammam, and hydro-wellness treatments performed by trained therapists. Any inappropriate behavior or solicitation of non-therapeutic services is strictly prohibited and will result in immediate termination of the session without refund.
+              All treatments offered at Rian Luxury Thai Spa are strictly legitimate wellness, massage, hammam, and relaxation therapies delivered by trained staff. Any conduct inconsistent with professional spa standards is strictly prohibited.
             </p>
           </div>
 
           <div class="rounded-2xl gilded-card p-5 space-y-2">
-            <h3 class="font-serif font-bold text-gold-700 text-base">2. Hygiene, Sanitation &amp; Guest Eligibility</h3>
+            <h3 class="font-serif font-bold text-gold-700 text-base">2. Hygiene, Single-Use Linens &amp; Eligibility</h3>
             <p class="text-espresso-700 text-xs sm:text-sm leading-relaxed">
-              All therapy suites, steam rooms, and jacuzzi tubs are thoroughly sanitized before every appointment using fresh single-use bed linens and disposable essentials. Guests must be 18 years or older and may be requested to present valid government photo identification upon check-in.
+              Suites, steam/hamam areas, and jacuzzi tubs are sanitized between sessions with fresh single-use linens. Guests must be 18 years or older and provide valid government ID when requested.
             </p>
           </div>
 
           <div class="rounded-2xl gilded-card p-5 space-y-2">
-            <h3 class="font-serif font-bold text-gold-700 text-base">3. Appointments, Pricing &amp; Rescheduling</h3>
+            <h3 class="font-serif font-bold text-gold-700 text-base">3. Pricing, Appointments &amp; Cancellations</h3>
             <p class="text-espresso-700 text-xs sm:text-sm leading-relaxed">
-              Listed rates (starting from &#8377;999) represent base session prices; final pricing depends on selected duration (60 / 90 minutes) or suite upgrades, plus applicable government taxes if any. Please arrive 10 minutes prior to your scheduled slot. Rescheduling is complimentary with at least 2 hours prior notice on +91 96069 19198.
+              Quoted prices reflect starting rates; final charges depend on selected session duration (such as 60 or 90 minutes) or suite upgrades plus applicable taxes. Please notify +91 96069 19198 in advance to reschedule.
             </p>
           </div>
 
           <div class="rounded-2xl gilded-card p-5 space-y-2">
-            <h3 class="font-serif font-bold text-gold-700 text-base">4. Health Advisory &amp; Data Privacy</h3>
+            <h3 class="font-serif font-bold text-gold-700 text-base">4. Health Advisory &amp; Privacy Policy</h3>
             <p class="text-espresso-700 text-xs sm:text-sm leading-relaxed">
-              Please inform our reception or therapist of any medical conditions, recent surgeries, allergies, skin sensitivities, or pregnancy prior to your session. Contact details shared via WhatsApp or phone are used solely to confirm and manage your spa appointment and are never sold to third parties.
+              Please disclose any health conditions, allergies, skin sensitivities, or pregnancy before starting a therapy. Booking details shared via WhatsApp or phone are used only to coordinate your appointment.
             </p>
           </div>
         </div>
@@ -1020,16 +1006,17 @@
     </section>
   </main>
 
-  <!-- Footer (Royal Sapphire & Burnished Gold Architectural Footer) -->
+  <!-- Footer -->
   <footer class="bg-royal-950 border-t-2 border-gold-400/60 text-champagne-200 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div class="grid md:grid-cols-3 gap-8 pb-8 border-b border-gold-400/25">
         <div class="space-y-3">
           <div class="inline-block bg-champagne-100 border border-gold-400/60 rounded-xl p-1.5 shadow">
             <img
-              src="1000301758.jpg"
+              src="rian-logo.jpg"
               alt="Rian Luxury Thai Spa Logo"
-              onerror="if(this.src.indexOf('rian_logo_cutout.jpg')===-1){this.src='rian_logo_cutout.jpg';}else{this.style.display='none';}"
+              data-fallbacks='["rian-banner.jpg","rian_logo_cutout.jpg","1000301758.jpg"]'
+              onerror="handleSmartImageFallback(this)"
               class="h-11 w-auto object-contain rounded-lg"
             />
           </div>
@@ -1044,27 +1031,27 @@
           <p class="font-bold text-gold-300 uppercase tracking-wider">Quick Links</p>
           <ul class="space-y-1.5">
             <li><a href="#services" class="hover:text-gold-300 transition">Services &amp; Starting Prices</a></li>
-            <li><a href="#gallery" class="hover:text-gold-300 transition">Reception, Lounge &amp; Suites Gallery</a></li>
-            <li><a href="#virtual-tour" class="hover:text-gold-300 transition">360&deg; 3D Virtual Spa Tour</a></li>
+            <li><a href="#gallery" class="hover:text-gold-300 transition">Reception, Lounge &amp; Suites</a></li>
+            <li><a href="#virtual-tour" class="hover:text-gold-300 transition">360&deg; 3D Virtual Tour</a></li>
             <li><a href="#faq" class="hover:text-gold-300 transition">Frequently Asked Questions</a></li>
-            <li><a href="#policies" class="hover:text-gold-300 transition">Terms, Hygiene &amp; Privacy Policy</a></li>
+            <li><a href="#policies" class="hover:text-gold-300 transition">Terms &amp; Conditions</a></li>
           </ul>
         </div>
 
         <div class="space-y-2">
           <p class="font-bold text-gold-300 uppercase tracking-wider">Official Links</p>
           <ul class="space-y-1.5">
-            <li><a href="https://wa.me/c/919606919198" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 transition">WhatsApp Service Catalogue</a></li>
+            <li><a href="https://wa.me/c/919606919198" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 transition">WhatsApp Catalogue (wa.me/c/919606919198)</a></li>
             <li><a href="https://www.instagram.com/rian_luxury_thai_spa/" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 transition">Instagram (@rian_luxury_thai_spa)</a></li>
-            <li><a href="https://g.page/r/CQ8JOTRqd4OyEBM/review" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 transition">Leave a Google Review</a></li>
-            <li><a href="https://www.rianluxurythaispamarathahalli.com/" class="hover:text-gold-300 transition">rianluxurythaispamarathahalli.com</a></li>
+            <li><a href="https://g.page/r/CQ8JOTRqd4OyEBM/review" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 transition">Google Review Link</a></li>
+            <li><a href="http://www.rianluxurythaispamarathahalli.com/" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 transition">rianluxurythaispamarathahalli.com</a></li>
           </ul>
         </div>
       </div>
 
       <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-champagne-300/80">
         <p>&copy; <span id="currentYear">2026</span> Rian Luxury Thai Spa, Marathahalli, Bengaluru. All rights reserved.</p>
-        <p>Professional Wellness &amp; Therapeutic Spa Services Only.</p>
+        <p>Professional Wellness &amp; Spa Services Only.</p>
       </div>
     </div>
   </footer>
@@ -1088,7 +1075,7 @@
       </div>
 
       <div class="relative bg-espresso-950 flex items-center justify-center max-h-[72vh] overflow-hidden">
-        <img id="lightboxImage" src="" alt="" class="max-h-[72vh] w-auto max-w-full object-contain" />
+        <img id="lightboxImage" src="" alt="" onerror="handleSmartImageFallback(this)" class="max-h-[72vh] w-auto max-w-full object-contain" />
         <button type="button" id="prevLightboxBtn" aria-label="Previous Photo"
                 class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-champagne-50/95 border border-gold-500/60 text-espresso-950 hover:bg-gold-500 hover:text-white flex items-center justify-center text-lg font-bold shadow transition">
           &#8249;
@@ -1101,10 +1088,10 @@
 
       <div class="px-4 sm:px-6 py-3 bg-champagne-100 border-t border-gold-500/30 flex flex-wrap items-center justify-between gap-3">
         <p id="lightboxCaption" class="text-xs sm:text-sm text-espresso-800 font-medium"></p>
-        <a href="https://wa.me/919606919198?text=Hello%20Rian%20Luxury%20Thai%20Spa%2C%20I%20would%20like%20to%20book%20a%20suite%20session%20at%20Marathahalli."
+        <a href="https://wa.me/919606919198?text=Hello%20Rian%20Luxury%20Thai%20Spa%2C%20I%20would%20like%20to%20book%20a%20session%20at%20Marathahalli."
            target="_blank" rel="noopener noreferrer"
            class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition">
-          Book This Ambience on WhatsApp
+          Book on WhatsApp
         </a>
       </div>
     </div>
@@ -1137,7 +1124,10 @@
   </a>
 
   <script>
-    // Complete dataset of all 12 Rian Luxury Thai Spa services with exact uploaded product & interior images
+    // Ensure handleSmartImageFallback remains globally accessible
+    const handleSmartImageFallback = window.handleSmartImageFallback;
+
+    // All 12 Rian Luxury Thai Spa services with clean lowercase hyphenated image names + automatic original-name fallbacks
     const SPA_SERVICES = [
       {
         id: 1,
@@ -1145,9 +1135,9 @@
         price: "₹1,999 onwards",
         selectValue: "Dry Thai Massage (₹1,999 onwards)",
         category: "massages",
-        badge: "Authentic Thai",
-        image: "Dry Thai Massage.jpg",
-        fallbackImage: "IMG_20261015_135434.jpg",
+        badge: "Traditional Thai",
+        image: "dry-thai-massage.jpg",
+        fallbacks: ["Dry Thai Massage.jpg", "therapy-suite-1.jpg", "IMG_20261015_135602.jpg", "rian-banner.jpg"],
         description: "Traditional Thai stretching & pressure-point therapy. No oil. Improves flexibility, relieves stiffness & body pain. 60 / 90 min available."
       },
       {
@@ -1156,9 +1146,9 @@
         price: "₹2,999 onwards",
         selectValue: "Swedish Massage (₹2,999 onwards)",
         category: "massages",
-        badge: "Classic Relaxation",
-        image: "IMG_20261015_135602.jpg",
-        fallbackImage: "Semi VIP Session.jpg",
+        badge: "Stress Relief",
+        image: "therapy-suite-1.jpg",
+        fallbacks: ["IMG_20261015_135602.jpg", "semi-vip-session.jpg", "Semi VIP Session.jpg", "rian-banner.jpg"],
         description: "Gentle, relaxing full-body massage with long, smooth strokes. Best for stress relief, better sleep & complete relaxation."
       },
       {
@@ -1167,9 +1157,9 @@
         price: "₹2,999 onwards",
         selectValue: "Deep Tissue Massage (₹2,999 onwards)",
         category: "massages",
-        badge: "Muscle Recovery",
-        image: "Deep Tissue Massage.jpg",
-        fallbackImage: "IMG_20261015_135602.jpg",
+        badge: "Muscle Tension",
+        image: "deep-tissue-massage.jpg",
+        fallbacks: ["Deep Tissue Massage.jpg", "therapy-suite-1.jpg", "IMG_20261015_135602.jpg", "rian-banner.jpg"],
         description: "Slow, deep pressure to release chronic muscle tension, back pain & knots. Ideal for gym-goers & desk workers."
       },
       {
@@ -1178,9 +1168,9 @@
         price: "₹2,799 onwards",
         selectValue: "Balinese Massage (₹2,799 onwards)",
         category: "massages",
-        badge: "Holistic Calm",
-        image: "Balinese Massage.jpg",
-        fallbackImage: "IMG_20261015_135602.jpg",
+        badge: "Stretches & Oils",
+        image: "balinese-massage.jpg",
+        fallbacks: ["Balinese Massage.jpg", "therapy-suite-1.jpg", "IMG_20261015_135602.jpg", "rian-banner.jpg"],
         description: "Blend of gentle stretches, acupressure & aromatherapy oils. Deep relaxation for mind & body."
       },
       {
@@ -1190,8 +1180,8 @@
         selectValue: "Aroma Therapy Massage (₹2,199 onwards)",
         category: "massages",
         badge: "Essential Oils",
-        image: "Aroma Therapy Massage.jpg",
-        fallbackImage: "IMG_20261015_135602.jpg",
+        image: "aroma-therapy-massage.jpg",
+        fallbacks: ["Aroma Therapy Massage.jpg", "therapy-suite-1.jpg", "IMG_20261015_135602.jpg", "rian-banner.jpg"],
         description: "Soothing massage with premium essential oils. Reduces anxiety, improves mood & promotes deep calm. Choose your favourite aroma."
       },
       {
@@ -1200,9 +1190,9 @@
         price: "₹4,999 onwards",
         selectValue: "Couple Massage (₹4,999 onwards)",
         category: "vip",
-        badge: "Private Couple Suite",
-        image: "Couple Massage.jpg",
-        fallbackImage: "IMG_20261015_141549.jpg",
+        badge: "Couple Room",
+        image: "couple-massage.jpg",
+        fallbacks: ["Couple Massage.jpg", "couple-suite-1.jpg", "IMG_20261015_141549.jpg", "rian-banner.jpg"],
         description: "Private couple room for you & your partner. Side-by-side relaxing massage with candles & premium ambience. Perfect for anniversaries & dates."
       },
       {
@@ -1211,9 +1201,9 @@
         price: "₹3,499 onwards",
         selectValue: "Semi VIP Session (₹3,499 onwards)",
         category: "vip",
-        badge: "Upgraded Suite",
-        image: "Semi VIP Session.jpg",
-        fallbackImage: "IMG_20261015_135727.jpg",
+        badge: "Private Room",
+        image: "semi-vip-session.jpg",
+        fallbacks: ["Semi VIP Session.jpg", "vip-suite.jpg", "IMG_20261015_135727.jpg", "rian-banner.jpg"],
         description: "Premium private room, upgraded ambience & extended therapy. A step above regular sessions for extra comfort & privacy."
       },
       {
@@ -1223,8 +1213,8 @@
         selectValue: "VIP Session (₹3,999 onwards)",
         category: "vip",
         badge: "Exclusive VIP",
-        image: "IMG_20261015_135727.jpg",
-        fallbackImage: "Semi VIP Session.jpg",
+        image: "vip-suite.jpg",
+        fallbacks: ["IMG_20261015_135727.jpg", "semi-vip-session.jpg", "Semi VIP Session.jpg", "rian-banner.jpg"],
         description: "Exclusive VIP room, premium oils, personal attention & luxury setup. For guests who want the best experience."
       },
       {
@@ -1234,8 +1224,8 @@
         selectValue: "VVIP Royal Jacuzzi Session (₹5,999 onwards)",
         category: "vip",
         badge: "Signature Royal",
-        image: "1000301758.jpg",
-        fallbackImage: "rian_logo_cutout.jpg",
+        image: "rian-banner.jpg",
+        fallbacks: ["1000301758.jpg", "rian-logo.jpg", "rian_logo_cutout.jpg"],
         description: "Our signature royal experience. Luxury jacuzzi soak + full-body massage in a premium VVIP suite. Ultimate indulgence."
       },
       {
@@ -1244,9 +1234,9 @@
         price: "₹5,999 onwards",
         selectValue: "Turkish Hamam (₹5,999 onwards)",
         category: "body",
-        badge: "Steam & Foam Ritual",
-        image: "IMG_20261015_132335.jpg",
-        fallbackImage: "IMG_20261015_132457.jpg",
+        badge: "Steam & Foam",
+        image: "reception-sofa.jpg",
+        fallbacks: ["IMG_20261015_132335.jpg", "reception-desk.jpg", "IMG_20261015_132457.jpg", "rian-banner.jpg"],
         description: "Traditional Turkish steam, scrub & foam ritual. Deep cleansing, glowing skin & total detox."
       },
       {
@@ -1255,9 +1245,9 @@
         price: "₹2,999 onwards",
         selectValue: "Scrub & Body Polishing (₹2,999 onwards)",
         category: "body",
-        badge: "Skin Radiance",
-        image: "Scrub & Body Polishing.jpg",
-        fallbackImage: "IMG_20261015_135602.jpg",
+        badge: "Skin Polishing",
+        image: "scrub-body-polishing.jpg",
+        fallbacks: ["Scrub & Body Polishing.jpg", "therapy-suite-1.jpg", "IMG_20261015_135602.jpg", "rian-banner.jpg"],
         description: "Full-body exfoliation & polishing for soft, smooth & radiant skin. Removes tan & dead skin."
       },
       {
@@ -1266,69 +1256,76 @@
         price: "₹999 onwards",
         selectValue: "Foot Massage (₹999 onwards)",
         category: "massages",
-        badge: "Reflexology",
-        image: "Foot Massage.jpg",
-        fallbackImage: "IMG_20261015_132038.jpg",
+        badge: "Foot Reflexology",
+        image: "foot-massage.jpg",
+        fallbacks: ["Foot Massage.jpg", "foot-lounge.jpg", "IMG_20261015_132038.jpg", "rian-banner.jpg"],
         description: "Relaxing foot reflexology. Relieves tired feet, improves circulation & reduces stress. Perfect after a long day."
       }
     ];
 
-    // Authentic Reception, Lounge & Therapy Suites Photo Gallery
+    // Reception, Lounge & Therapy Suites Gallery with clean lowercase hyphenated names + automatic fallbacks
     const SPA_GALLERY = [
       {
-        src: "IMG_20261015_132457.jpg",
-        tag: "Reception & Welcome",
-        title: "Grand Reception & Buddha Wall Lounge",
-        caption: "Main reception desk and serene Buddha wall artwork at Rian Luxury Thai Spa, Marathahalli."
+        src: "reception-desk.jpg",
+        fallbacks: ["IMG_20261015_132457.jpg", "rian-banner.jpg", "1000301758.jpg"],
+        tag: "Reception",
+        title: "Reception & Welcome Desk",
+        caption: "Front reception desk and lounge area at Rian Luxury Thai Spa, Marathahalli."
       },
       {
-        src: "IMG_20261015_132335.jpg",
-        tag: "Royal Waiting Lounge",
-        title: "Royal Gold & Ivory Waiting Lounge",
-        caption: "Ornate gold-carved seating with floral bowls and Thai welcome sculptures."
+        src: "reception-sofa.jpg",
+        fallbacks: ["IMG_20261015_132335.jpg", "reception-desk.jpg", "rian-banner.jpg"],
+        tag: "Lounge",
+        title: "Royal Gold & Ivory Lounge",
+        caption: "Carved seating, decorative bowls, and welcoming Thai sculptures."
       },
       {
-        src: "IMG_20261015_132038.jpg",
-        tag: "Foot Reflexology Area",
-        title: "Royal Blue & Gold Foot Reflexology Thrones",
-        caption: "Dedicated raised platform with brass foot-soak bowls and plush royal thrones."
+        src: "foot-lounge.jpg",
+        fallbacks: ["IMG_20261015_132038.jpg", "foot-massage.jpg", "Foot Massage.jpg"],
+        tag: "Foot Lounge",
+        title: "Foot Reflexology Thrones",
+        caption: "Plush royal blue and gold chairs with foot-soak bowls."
       },
       {
-        src: "IMG_20261015_135330.jpg",
-        tag: "Suite Wing",
-        title: "Ambient Candlelit Suite Corridor",
-        caption: "Private sound-buffered therapy suites lined with soft mood lighting and floral accents."
+        src: "spa-corridor.jpg",
+        fallbacks: ["IMG_20261015_135330.jpg", "therapy-suite-1.jpg", "rian-banner.jpg"],
+        tag: "Suite Corridor",
+        title: "Private Suite Corridor",
+        caption: "Quiet hallway leading to private therapy rooms."
       },
       {
-        src: "IMG_20261015_135602.jpg",
-        tag: "Single Therapy Room",
-        title: "Private Single Therapy Suite",
-        caption: "Sanitized single therapy suite with fresh linens, swan towel art, and climate control."
+        src: "therapy-suite-1.jpg",
+        fallbacks: ["IMG_20261015_135602.jpg", "semi-vip-session.jpg", "Semi VIP Session.jpg"],
+        tag: "Therapy Room",
+        title: "Private Therapy Suite",
+        caption: "Air-conditioned private room prepared with fresh linens."
       },
       {
-        src: "IMG_20261015_135727.jpg",
+        src: "vip-suite.jpg",
+        fallbacks: ["IMG_20261015_135727.jpg", "semi-vip-session.jpg", "Semi VIP Session.jpg"],
         tag: "VIP Suite",
-        title: "Luxury VIP Therapy Room",
-        caption: "Upgraded VIP suite featuring royal gold damask walls and calming ambient lighting."
+        title: "VIP Therapy Room",
+        caption: "Upgraded suite ambience with warm lighting and privacy."
       },
       {
-        src: "IMG_20261015_141549.jpg",
-        tag: "Couple & Twin Suite",
-        title: "Twin & Couple Therapy Suite (View 1)",
-        caption: "Spacious side-by-side therapy beds prepared with rose petals and lotus towel folding."
+        src: "couple-suite-1.jpg",
+        fallbacks: ["IMG_20261015_141549.jpg", "couple-massage.jpg", "Couple Massage.jpg"],
+        tag: "Couple Suite",
+        title: "Couple & Twin Suite (View 1)",
+        caption: "Side-by-side beds in our couple and twin therapy suite."
       },
       {
-        src: "IMG_20261015_141607.jpg",
-        tag: "Couple & Twin Suite",
-        title: "Twin & Couple Therapy Suite (View 2)",
-        caption: "Private couple suite angle showcasing air-conditioned comfort and Thai wall sconces."
+        src: "couple-suite-2.jpg",
+        fallbacks: ["IMG_20261015_141607.jpg", "couple-suite-1.jpg", "IMG_20261015_141549.jpg"],
+        tag: "Couple Suite",
+        title: "Couple & Twin Suite (View 2)",
+        caption: "Spacious twin suite view with Thai decor and climate control."
       }
     ];
 
     const WHATSAPP_NUMBER = "919606919198";
     let currentLightboxIndex = 0;
 
-    // Render service cards with 16:10 high-resolution visual headers & champagne-gold styling
     function renderServices(filter = "all") {
       const grid = document.getElementById("servicesGrid");
       const filtered = filter === "all"
@@ -1337,21 +1334,21 @@
 
       grid.innerHTML = filtered.map(service => {
         const directMsg = encodeURIComponent(
-          `Hello Rian Luxury Thai Spa, I would like to book *${service.name}* (${service.price}) at your Marathahalli center.`
+          `Hello Rian Luxury Thai Spa, I would like to book *${service.name}* (${service.price}) at 2nd Floor, Venkatadri Plaza, Marathahalli.`
         );
         const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${directMsg}`;
-        const safeFallback = service.fallbackImage || "1000301758.jpg";
+        const fallbackAttr = JSON.stringify(service.fallbacks || []).replace(/"/g, "&quot;");
 
         return `
           <article class="group rounded-2xl gilded-card overflow-hidden flex flex-col justify-between transition">
             <div>
-              <!-- 16:10 Product / Therapy Visual Header -->
               <div class="relative aspect-[16/10] w-full bg-champagne-200 overflow-hidden border-b border-gold-500/35">
                 <img
                   src="${service.image}"
                   alt="${service.name} at Rian Luxury Thai Spa Marathahalli"
                   loading="lazy"
-                  onerror="if(!this.dataset.triedFallback){this.dataset.triedFallback='1';this.src='${safeFallback}';}else{this.style.display='none';}"
+                  data-fallbacks="${fallbackAttr}"
+                  onerror="handleSmartImageFallback(this)"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-espresso-950/65 via-transparent to-espresso-950/15 pointer-events-none"></div>
@@ -1396,41 +1393,44 @@
       }).join("");
     }
 
-    // Render Reception, Lounge & Therapy Suites Gallery
     function renderGallery() {
       const galleryGrid = document.getElementById("galleryGrid");
       if (!galleryGrid) return;
 
-      galleryGrid.innerHTML = SPA_GALLERY.map((item, idx) => `
-        <button type="button"
-                onclick="openLightbox(${idx})"
-                class="group text-left rounded-2xl overflow-hidden gilded-card transition flex flex-col">
-          <div class="relative aspect-[4/3] w-full bg-champagne-200 overflow-hidden border-b border-gold-500/30">
-            <img
-              src="${item.src}"
-              alt="${item.title} - Rian Luxury Thai Spa Marathahalli"
-              loading="lazy"
-              onerror="if(!this.dataset.triedFallback){this.dataset.triedFallback='1';this.src='1000301758.jpg';}"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-espresso-950/65 via-transparent to-transparent"></div>
-            <span class="absolute top-2.5 left-2.5 text-[10px] uppercase tracking-wider font-bold px-2.5 py-1 rounded-full bg-champagne-50/95 border border-gold-500/50 text-gold-700 shadow-sm">
-              ${item.tag}
-            </span>
-            <span class="absolute bottom-2.5 right-2.5 text-[11px] font-bold px-2.5 py-0.5 rounded bg-champagne-50/95 text-espresso-950 group-hover:bg-gold-500 group-hover:text-white transition">
-              Expand
-            </span>
-          </div>
-          <div class="p-4 flex-1 flex flex-col justify-between">
-            <h3 class="font-serif text-base font-bold text-espresso-950 group-hover:text-gold-700 transition">
-              ${item.title}
-            </h3>
-            <p class="mt-1 text-xs text-espresso-700 line-clamp-2">
-              ${item.caption}
-            </p>
-          </div>
-        </button>
-      `).join("");
+      galleryGrid.innerHTML = SPA_GALLERY.map((item, idx) => {
+        const fallbackAttr = JSON.stringify(item.fallbacks || []).replace(/"/g, "&quot;");
+        return `
+          <button type="button"
+                  onclick="openLightbox(${idx})"
+                  class="group text-left rounded-2xl overflow-hidden gilded-card transition flex flex-col">
+            <div class="relative aspect-[4/3] w-full bg-champagne-200 overflow-hidden border-b border-gold-500/30">
+              <img
+                src="${item.src}"
+                alt="${item.title} - Rian Luxury Thai Spa Marathahalli"
+                loading="lazy"
+                data-fallbacks="${fallbackAttr}"
+                onerror="handleSmartImageFallback(this)"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-950/65 via-transparent to-transparent"></div>
+              <span class="absolute top-2.5 left-2.5 text-[10px] uppercase tracking-wider font-bold px-2.5 py-1 rounded-full bg-champagne-50/95 border border-gold-500/50 text-gold-700 shadow-sm">
+                ${item.tag}
+              </span>
+              <span class="absolute bottom-2.5 right-2.5 text-[11px] font-bold px-2.5 py-0.5 rounded bg-champagne-50/95 text-espresso-950 group-hover:bg-gold-500 group-hover:text-white transition">
+                View Full
+              </span>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <h3 class="font-serif text-base font-bold text-espresso-950 group-hover:text-gold-700 transition">
+                ${item.title}
+              </h3>
+              <p class="mt-1 text-xs text-espresso-700 line-clamp-2">
+                ${item.caption}
+              </p>
+            </div>
+          </button>
+        `;
+      }).join("");
     }
 
     function openLightbox(index) {
@@ -1441,6 +1441,9 @@
       document.getElementById("lightboxTag").textContent = item.tag;
       document.getElementById("lightboxTitle").textContent = item.title;
       document.getElementById("lightboxCaption").textContent = item.caption;
+      delete img.dataset.fallbackQueue;
+      img.dataset.fallbacks = JSON.stringify(item.fallbacks || []);
+      img.style.display = "";
       img.src = item.src;
       img.alt = item.title;
       lightbox.classList.remove("hidden");
@@ -1453,7 +1456,6 @@
       document.body.style.overflow = "";
     }
 
-    // Pre-fill the interactive WhatsApp booking funnel and scroll smoothly
     function selectServiceForBooking(serviceSelectValue) {
       const selectEl = document.getElementById("serviceSelect");
       if (selectEl) {
@@ -1466,7 +1468,6 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-      // Set dynamic footer year & default booking date to today
       document.getElementById("currentYear").textContent = new Date().getFullYear();
       const dateInput = document.getElementById("bookingDate");
       if (dateInput) {
@@ -1475,7 +1476,6 @@
         dateInput.value = today;
       }
 
-      // Initial render of all 12 services and 8 gallery photos
       renderServices("all");
       renderGallery();
 
@@ -1494,7 +1494,7 @@
         if (e.key === "ArrowRight") openLightbox(currentLightboxIndex + 1);
       });
 
-      // Service filter button handlers
+      // Service filter buttons
       document.querySelectorAll(".service-filter-btn").forEach(btn => {
         btn.addEventListener("click", () => {
           document.querySelectorAll(".service-filter-btn").forEach(b => {
@@ -1553,13 +1553,13 @@
 
         const formattedMessage =
           `Hello Rian Luxury Thai Spa (Marathahalli),\n` +
-          `I would like to request an appointment:\n\n` +
+          `I would like to request a booking:\n\n` +
           `• *Name:* ${name}\n` +
           `• *Service:* ${service}\n` +
           `• *Duration / Option:* ${duration}\n` +
           `• *Date:* ${date}\n` +
           `• *Preferred Time:* ${time}\n\n` +
-          `Please confirm slot availability. Thank you!`;
+          `Please confirm availability. Thank you!`;
 
         const targetUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(formattedMessage)}`;
         window.open(targetUrl, "_blank", "noopener,noreferrer");
