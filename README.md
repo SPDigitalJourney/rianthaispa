@@ -4,12 +4,12 @@ Address: 2nd Floor, Venkatadri Plaza, 88, Marathahalli - Sarjapur Outer Ring Roa
 Hours: 10 AM - 10 PM Daily
 
 FILES:
-- index.html = full website (HTML + CSS + JS in one file, images are embedded inside it, so it works alone)
-- images/ = all original photos + logo - backup / for future edits
+- index.html = full website (HTML + CSS + JS in one file)
+- images/ = all photos + logo used in site
 
 HOW TO UPLOAD TO GITHUB:
 1. Create repo rianthaispa on github.com (Public)
-2. Add file > Upload files > Select index.html (and images folder if you want backup)
+2. Add file > Upload files > Select ALL: index.html + images folder
 3. Commit changes
 4. Settings > Pages > Branch main, Folder / (root) > Save
 5. Custom domain: www.rianthaispa.com
